@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+	<meta charset="utf-8" />
+		<link rel="stylesheet" href="app.css">
+	</head>
+	<body>
+		<div class="page">
+			<div class="intro-card">
+				<div class="intro-image"><img src="ryan.gif"></div>
+				<div class="intro-meta">
+					<h1>라이언</h1>
+					<div>카카오프렌즈</div>
+					<ul>
+						<li>~~~</li>
+					</ul>
+				</div>
+				<div class="intro-content">
+					content
+				</div>
+				<div class="intro-buttons">
+					<button id="btn-hello">인사</button>
+					<button id="btn-star">반짝반짝</button>
+				</div>
+			</div>
+		</div>
+		<script>
+document.getElementById('btn-hello').addEventListener('click', function(event){
+	alert('안녕하세요');
+});
+
+document.querySelector('#btn-star').addEventListener('click', function(event){
+	var content = ''
+	for (var i = 1; i < 6; i++) {
+		var row = ''
+		for (var k = 0; k < i; k++) {
+			row += '*'
+		}
+		content += row + '<br>'
+	}
+	document.getElementsByClassName('intro-content')[0].innerHTML = content
+});
+		</script>
+	</body>
+</html>
