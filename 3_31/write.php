@@ -41,7 +41,7 @@ session_start();
 	// !feof($file): $file 핸들러 내용이 끝나지 않았다면 계속 반복
 	while (!feof($file)) { 
 		// fgets(파일 핸들러): 개행문자를 기준으로 한줄씩 내용을 읽어옴
-		echo fgets($file);
+		echo htmlspecialchars(fgets($file), ENT_QUOTES,'utf-8');
 		echo "<br>";
 	}
 	
