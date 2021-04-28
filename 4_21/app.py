@@ -45,7 +45,7 @@ def chat_data():
             time.sleep(1)
     
     new_chats = chats[last_chat:]
-    return {'chats': new_chats, 'last_chat': len(chats)}
+    return {'chats': new_chats, 'last_chat': len(chats)} 
 
 @app.route('/chat/write', methods=['POST'])
 def chat_write():
