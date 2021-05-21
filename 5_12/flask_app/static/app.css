@@ -1,6 +1,76 @@
 body {
 	padding-top: 80px;
 }		
+/*index.html*/
+.head{
+	height: 40%;
+	width: 100%;
+	text-align: center;
+	padding-top: 10%;
+	padding-bottom: 7%;
+	background-image: url('/static/image/dgsw.jpg');
+	background-size: 50%;
+}
+#text{
+	height: 50%;
+	width: 50%;
+	position: relative;
+	left: 25%;
+	background-color: white;
+	opacity: 0.5;
+}
+
+.center {
+    height: 300px;
+    width: 100%;
+    background-color: #6495ED;
+}
+.content-left{
+	height: 150px;
+	width: 60%;
+	margin: 20px;
+	float: left;
+	text-align: left;
+}
+.content-right{
+	height: 150px;
+	width: 60%;
+	margin: 20px;
+	float: right;
+	text-align: right;
+}
+
+#right-li{
+	float: right;
+}
+
+#me {
+    box-sizing: border-box;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+	position: absolute;
+	top: 150px;
+	left: 47%;
+}
+
+.like {
+	float: left;
+	width: 15%;
+	height: 15%;
+}
+
+.dislike {
+	float: right;
+	width: 15%;
+	height: 15%;
+}
+
+.hobby{
+	float: left;
+	width: 15%;
+	height: 15%;
+}
 
 /* login.html, join.html */
 .form-signin {
@@ -55,4 +125,6 @@ body {
 	float: right;
 	font-size: 0.9em;
 }
+
+
 

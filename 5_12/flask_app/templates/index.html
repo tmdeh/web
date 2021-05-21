@@ -67,13 +67,51 @@ index.html, join.html, login.html 등으로 설정된 링크들도 app.py 에서
 				</div>
 			</div>
 		</nav>
-		<div class="text-center">
-<!-- 로그인 상태에 따라 다른 내용 표시 -->
-{% if user_name %}
-			안녕하세요!
-{% else %}
-			로그인 후 사용해주세요.
-{% endif %}
+
+		<div class="center">
+			<img src="/static/image/me.jpg" id="me">
 		</div>
+		<div class="head">
+			<div id="text">
+		<h1>안녕하세요!!</h1>
+		저는 대구소프트웨어마이스터고등학교에 재학 중인 유승도입니다.
+		</div>
+	</div>
+	<div class="content-left"><h2 class="title">좋아하는 것들</h2>
+	<ul>
+		<li>리그오브레전드</li>
+		<li>치킨</li>
+		<li>파란색</li>
+	</ul>
+	</div>
+	<div class="like">
+	<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" fill="currentColor" class="bi bi-emoji-laughing" viewBox="0 0 16 16">
+		<path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+		<path d="M12.331 9.5a1 1 0 0 1 0 1A4.998 4.998 0 0 1 8 13a4.998 4.998 0 0 1-4.33-2.5A1 1 0 0 1 4.535 9h6.93a1 1 0 0 1 .866.5zM7 6.5c0 .828-.448 0-1 0s-1 .828-1 0S5.448 5 6 5s1 .672 1 1.5zm4 0c0 .828-.448 0-1 0s-1 .828-1 0S9.448 5 10 5s1 .672 1 1.5z"/>
+	  </svg>
+	</div>
+	<div class="content-right"><h2 class="title">싫어하는 것들</h2>
+	<ul id="right-li">
+		<li>조개</li>
+		<li>영어</li>
+		<li>기숙사</li>
+	</ul></div>
+	<div class="dislike">
+	<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" fill="currentColor" class="bi bi-emoji-frown" viewBox="0 0 16 16">
+		<path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+		<path d="M4.285 12.433a.5.5 0 0 0 .683-.183A3.498 3.498 0 0 1 8 10.5c1.295 0 2.426.703 3.032 1.75a.5.5 0 0 0 .866-.5A4.498 4.498 0 0 0 8 9.5a4.5 4.5 0 0 0-3.898 2.25.5.5 0 0 0 .183.683zM7 6.5C7 7.328 6.552 8 6 8s-1-.672-1-1.5S5.448 5 6 5s1 .672 1 1.5zm4 0c0 .828-.448 1.5-1 1.5s-1-.672-1-1.5S9.448 5 10 5s1 .672 1 1.5z"/>
+	  </svg>
+	</div>
+	<div class="content-left"><h2 class="title">취미</h2>
+	<ul>
+		<li>독서</li>
+		<li>게임</li>
+		<li>애니메이션 시청</li>
+	</ul></div>
+	<div class="hobby">
+	<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" fill="currentColor" class="bi bi-chat" viewBox="0 0 16 16">
+		<path d="M2.678 11.894a1 1 0 0 1 .287.801 10.97 10.97 0 0 1-.398 2c1.395-.323 2.247-.697 2.634-.893a1 1 0 0 1 .71-.074A8.06 8.06 0 0 0 8 14c3.996 0 7-2.807 7-6 0-3.192-3.004-6-7-6S1 4.808 1 8c0 1.468.617 2.83 1.678 3.894zm-.493 3.905a21.682 21.682 0 0 1-.713.129c-.2.032-.352-.176-.273-.362a9.68 9.68 0 0 0 .244-.637l.003-.01c.248-.72.45-1.548.524-2.319C.743 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7-3.582 7-8 7a9.06 9.06 0 0 1-2.347-.306c-.52.263-1.639.742-3.468 1.105z"/>
+	  </svg>
+	</div>
 	</body>
 </html>
