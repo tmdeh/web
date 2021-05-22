@@ -41,6 +41,10 @@ h2{
 	font-size: 60pt;
 	color: blue;
 }
+.title{
+	font-size: 35pt;
+	font-weight: bold;
+}
 .content-left{
 	height: 300px;
 	width: 50%;
@@ -48,13 +52,9 @@ h2{
 	text-align: center;
 	border-bottom: 3px solid black;
 	margin-right: 17%;
-
+	margin-top: 5%;
 }
 
-.title{
-	font-size: 35pt;
-	font-weight: bold;
-}
 .content-right{
 	height: 300px;
 	width: 50%;
@@ -62,6 +62,7 @@ h2{
 	text-align: center;
 	border-bottom: 3px solid black;
 	margin-left: 17%;
+	margin-top: 5%;
 }
 
 /* #right-li{
