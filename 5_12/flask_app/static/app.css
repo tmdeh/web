@@ -7,51 +7,75 @@ body {
 	width: 100%;
 	text-align: center;
 	padding-top: 10%;
-	padding-bottom: 7%;
+	padding-bottom:3%;
 	background-image: url('/static/image/dgsw.jpg');
 	background-size: 50%;
+	margin-bottom: 10%;
+}
+p{
+	font-size: 30pt;
+}
+#hi{
+	font-size: 50pt;
+	font-weight: bold;
+	color: blue;
 }
 #text{
 	height: 50%;
-	width: 50%;
+	width: 80%;
 	position: relative;
-	left: 25%;
+	left: 10%;
 	background-color: white;
-	opacity: 0.5;
+	opacity: 0.7;
 }
 
 .center {
     height: 300px;
     width: 100%;
-    background-color: #6495ED;
+	background-image: url('/static/image/code.png');
+}
+li{
+	font-size: 25pt;
+}
+h2{
+	font-size: 60pt;
+	color: blue;
 }
 .content-left{
-	height: 150px;
-	width: 60%;
-	margin: 20px;
+	height: 300px;
+	width: 50%;
 	float: left;
-	text-align: left;
-}
-.content-right{
-	height: 150px;
-	width: 60%;
-	margin: 20px;
-	float: right;
-	text-align: right;
+	text-align: center;
+	border-bottom: 3px solid black;
+	margin-right: 17%;
+
 }
 
-#right-li{
-	float: right;
+.title{
+	font-size: 35pt;
+	font-weight: bold;
 }
+.content-right{
+	height: 300px;
+	width: 50%;
+	float: right;
+	text-align: center;
+	border-bottom: 3px solid black;
+	margin-left: 17%;
+}
+
+/* #right-li{
+	float: right;
+} */
 
 #me {
     box-sizing: border-box;
-    width: 150px;
-    height: 150px;
+    width: 300px;
+    height:	300px;
     border-radius: 50%;
 	position: absolute;
 	top: 150px;
-	left: 47%;
+	left: 42%;
 }
 
 .like {
