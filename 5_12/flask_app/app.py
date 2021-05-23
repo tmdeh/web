@@ -360,4 +360,4 @@ def guest_post():
 
 # 내장 웹서버 실행, 코드의 가장 마지막 줄에 있어야 함
 # host='0.0.0.0': 다른 컴퓨터에서도 접속할 수 있도록 설정 / port=5000: 웹 서버를 5000포트에 실행
-app.run(host='localhost', port=3000, debug=True)
+app.run(host='localhost', port=5000, debug=True)
