@@ -25,7 +25,7 @@ DELETE FROM guestbook WHERE pk = 1
 <html lang="ko">
 	<head>
 	<meta charset="utf-8" />
-		<link rel="stylesheet" href="app.css">
+		<link rel="stylesheet" href="/static/app.css">
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
 		<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -96,9 +96,14 @@ DELETE FROM guestbook WHERE pk = 1
 			{% for row in rows %}
 			<div class="message-container">
 				<div class="message">
-					<span class="message-time">{{row['inserted_at']}}</span>
+					<span class="message-time" name="time">{{row['inserted_at']}}</span>
 					<h5>{{row['auter']}}</h5>
 					<p>{{row['content']}}</p>
+					{% if user_name == row['auter'] %}
+					<form method="POST" action="/guest/delete/{{row['pk']}}">
+							<button type="submit" class="btn btn-danger">삭제</button>
+					</form>
+						{% endif %}
 				</div>
 			</div>
 			{% endfor %}

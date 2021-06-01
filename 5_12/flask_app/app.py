@@ -339,8 +339,9 @@ def guest():
 	conn = mysql.get_db()
 	cursor = conn.cursor()
 
-	cursor.execute('select auter, content, inserted_at from guestbook')
+	cursor.execute('select pk, auter, content, inserted_at from guestbook')
 	row = cursor.fetchall()
+
 
 	return render_template('guest.html', rows = row)
 
@@ -350,6 +351,7 @@ def guest_post():
 	conn = mysql.get_db()
 	cursor = conn.cursor()
 	content = request.values.get('content')
+	print(content)
 	user_name = session['user_name']
 	print(content)
 	cursor.execute('insert into guestbook(auter, content) values(%s, %s)', [user_name, content])
@@ -357,6 +359,17 @@ def guest_post():
 		conn.commit()
 	return redirect('/guest')
 
+
+@app.route('/guest/delete/<pk>', methods = ['POST'])
+def delete(pk):
+	
+	conn = mysql.get_db()
+	cursor = conn.cursor()
+
+	cursor.execute('delete from guestbook where pk = %s', [pk])
+	conn.commit()
+	
+	return redirect('/guest')
 
 # 내장 웹서버 실행, 코드의 가장 마지막 줄에 있어야 함
 # host='0.0.0.0': 다른 컴퓨터에서도 접속할 수 있도록 설정 / port=5000: 웹 서버를 5000포트에 실행
