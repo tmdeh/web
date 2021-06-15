@@ -19,9 +19,20 @@ router.get('/:schoolName', (req, res, next) => {
       res.status(200).json({});
       return;
     }
-    let school = jsonbody.schoolInfo[1]
-    let schoolcode = school.row[i].SD_SCHUL_CODE;
-    res.redirect('/:school/meal', schoolcode);
+    let schoolInfo = new Object;
+
+    console.log(jsonbody.schoolInfo[1].row[0]);
+    for(let i = 0; jsonbody.schoolInfo[1].row[i] =! undefined; i++){
+      let schoolCode = jsonbody.schoolInfo[1].SD_SCHUL_CODE
+      let schoolName = jsonbody.schoolInfo[1].SCHUL_NM
+      console.log(schoolName);
+
+      schoolInfo.schoolCode = schoolCode;
+      schoolInfo.schoolName = schoolName;
+    }
+
+    console.log(schoolInfo);
+    res.status(200).json({});
     });
 });
 
