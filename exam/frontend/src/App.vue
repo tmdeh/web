@@ -1,30 +1,8 @@
 <template>
   <div id="app">
-    <b-form-input v-model="schoolname" @keyup.enter ="submit" placeholder="학교이름"></b-form-input>
+    <h1><router-link to="/">오늘의 급식</router-link></h1>
     <router-view/>
   </div>
 </template>
 
-<script>
 
-  export default {
-    data() {
-      return {
-        schoolname: ''
-      }
-    },
-    methods:{
-      submit:function(){
-        this.schoolname = "";
-    }
-  }
-}
-</script>
-
-<style lang="scss">
-#app {
-  margin-top: 60px;
-  margin-bottom: 60px;
-
-}
-</style>
