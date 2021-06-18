@@ -1,12 +1,6 @@
 <template>
-    <div>
-        <!--<router-link to="meal/" v-bind="school" v-on:click="getMeal"> {{school.school_name}} ({{school.EOName}})</router-link>
-         <a href="/meal" v-bind:school="school">{{school.school_name}} ({{school.EOName}})</a> -->
-        <span @click="submit">{{school.SCHUL_NM}} ({{school.ATPT_OFCDC_SC_NM}})</span>
-        
-        <!-- <div class="meals">
-            <Meal v-if="meal !== []" v-bind:meal="meal"></Meal>
-        </div> -->
+    <div id="school">
+        <span @click="submit">-{{school.SCHUL_NM}}- ({{school.ATPT_OFCDC_SC_NM}})</span>
     </div>
 </template>
 
@@ -28,8 +22,6 @@ export default {
                 }
             }).then(resp => {
                 this.$root.meal = resp.data.meals;
-                //MMEAL_SC_NM 조식 중식 석식
-                //DDISH_NM 메뉴이름
             }).catch(() => {
                 this.$root.meal = "식단표가 없습니다.";
             });
@@ -37,3 +29,6 @@ export default {
     }
 }
 </script>
+<style lang="scss">
+
+</style>
