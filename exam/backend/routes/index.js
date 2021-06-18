@@ -7,7 +7,7 @@ router.get('/', function(req, res, next) {
   res.render('../public/index.html');
 });
 
-router.get('/:schoolName', (req, res, next) => {
+router.get('/api/:schoolName', (req, res, next) => {
   const school = req.params.schoolName;
   let url = "https://open.neis.go.kr/hub/schoolInfo?KEY=f08d52196c3a48ecbd679177083b65f0&Type=json&SCHUL_NM=" + encodeURI(school);
   request(url, (err, response, body) => {
@@ -19,24 +19,27 @@ router.get('/:schoolName', (req, res, next) => {
       res.status(200).json({});
       return;
     }
-    let schoolInfo = new Object;
+    // console.log(jsonbody.schoolInfo[1].row[0]);
+    let result = [];
+    for(let i = 0; jsonbody.schoolInfo[1].row[i] != undefined; i++){
+      let schoolCode = jsonbody.schoolInfo[1].row[i].SD_SCHUL_CODE;
+      let schoolName = jsonbody.schoolInfo[1].row[i].SCHUL_NM;
+      let EOCode = jsonbody.schoolInfo[1].row[i].ATPT_OFCDC_SC_CODE;
+      let EOName = jsonbody.schoolInfo[1].row[i].ATPT_OFCDC_SC_NM
 
-    console.log(jsonbody.schoolInfo[1].row[0]);
-    for(let i = 0; jsonbody.schoolInfo[1].row[i] =! undefined; i++){
-      let schoolCode = jsonbody.schoolInfo[1].SD_SCHUL_CODE
-      let schoolName = jsonbody.schoolInfo[1].SCHUL_NM
-      console.log(schoolName);
-
-      schoolInfo.schoolCode = schoolCode;
-      schoolInfo.schoolName = schoolName;
+      let tmp = new Object();
+      tmp.school_code = schoolCode;
+      tmp.school_name = schoolName;
+      tmp.EOCode = EOCode;
+      tmp.EOName = EOName;
+      result.push(tmp);
     }
 
-    console.log(schoolInfo);
-    res.status(200).json({});
+    res.status(200).json(result);
     });
 });
 
-router.get('/:schhool/meal', (req, res, next) => {
+router.get('/api/:schhool/meal', (req, res, next) => {
 
 });
 

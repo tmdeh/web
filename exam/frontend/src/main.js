@@ -9,6 +9,7 @@ import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 
 import axios from 'axios'
+
 Vue.prototype.$axios = axios.create({timeout: 15000})
 
 // Make BootstrapVue available throughout your project
@@ -21,5 +22,10 @@ Vue.config.productionTip = false
 new Vue({
   router,
   store,
+  data () {
+    return {
+      meal : [{msg : "학교를 선택해주세요."}]
+    }
+  },
   render: h => h(App)
 }).$mount('#app')

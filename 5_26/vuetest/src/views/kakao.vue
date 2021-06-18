@@ -7,7 +7,7 @@
         <!--<div v-else-if="select_index == 1">1</div>
         <div v-else>나머지</div> -->
         <br><br> 
-        <!--<FrinedCard v-for="friend in friends"  :key="friend.name" v-bind:friend="friend"></FrinedCard> --->
+        <!-- <FrinedCard v-for="friend in friends"  :key="friend.name" v-bind:friend="friend"></FrinedCard> - -->
     </div>
 </template>
 <script>
