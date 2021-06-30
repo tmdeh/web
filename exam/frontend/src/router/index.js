@@ -1,21 +1,21 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Main from '../views/Main.vue'
-// import School from '../components/School.vue'
+import Introduce from '../views/Introduce.vue'
 
 Vue.use(VueRouter)
 
 const routes = [
   {
     path: '/',
+    name: 'Introduce',
+    component:Introduce
+  },
+  {
+    path: '/main',
     name: 'Main',
     component: Main
   },
-  // {
-  //   path: '/school',
-  //   name: 'School',
-  //   component: School
-  // }
 ]
 
 const router = new VueRouter({

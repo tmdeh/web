@@ -1,8 +1,9 @@
 <template>
   <div id="app">
+    <router-link to="/"></router-link>
     <img src="../public/school.png">
     <p id="title">
-      <router-link to="/">오늘의 급식</router-link>
+      <router-link to="/main">오늘의 급식</router-link>
     </p>
     <router-view></router-view>
   </div>

@@ -49,6 +49,6 @@ export default {
     font-size: 30pt;
 }
 #DDISH_NM {
-    font-size: 20pt;
+    font-size: 18pt;
 }
 </style>
