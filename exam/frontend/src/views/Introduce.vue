@@ -2,7 +2,7 @@
     <div class="app">
         <div id="title1">환영합니다.</div>
         <div id="index">
-            학교를 검색하려면 오늘의 학교를 클릭해주세요.
+            학교를 검색하려면 오늘의 급식을 클릭해주세요.
         </div>
     </div>
 </template>

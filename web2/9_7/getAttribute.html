@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="https://pbs.twimg.com/profile_images/565080330218897409/DCTWrcEO_400x400.jpeg" alt="징징이" id="image" width="200px" height="200px" onclick="displaySrc()">
+</body>
+<script>
+    let displaySrc = () => {
+        let image = document.querySelector("#image");
+        alert("이미지 이름 : " + image.getAttribute("alt"));
+    }
+</script>
+</html>

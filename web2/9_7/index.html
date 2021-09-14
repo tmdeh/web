@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index</title>
+</head>
+<body>
+    <button onclick="innertext()">innerText</button>
+    <button onclick="innerhtml()">innerHtml</button>
+    <button onclick="reload()">초기화</button>
+
+    <div id="text1">innertext의 인해 변경될 예정</div>
+    <div id="text2">innerhtml의 인해 변경될 예정</div>
+</body>
+<script>
+    let innertext = () => {
+        document.getElementById("text1").innerText = "innertext의 인해 변경됨";
+    }
+    let innerhtml = () => {
+        document.getElementById("text2").innerHTML = "<h1>innerhtml의 인해 변경됨</h2>";
+    }
+    let reload = () => {
+        location.reload();
+    }
+</script>
+</html>
